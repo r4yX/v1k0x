@@ -32,11 +32,8 @@ function init_program() {
     mv exploits/0v53rber/ ../.hidden
     mv exploits/ch1s3c/ ../.hidden
     mv exploits/f1ng3r5talk3r/ ../.hidden
+    sudo mv exploits/config.txt /usr/bin/
 
-    cp ../.hidden/config.txt ../.hidden/0v53rber
-    cp ../.hidden/config.txt ../.hidden/ch1s3c
-    cp ../.hidden/config.txt ../.hidden/f1ng3r5talk3r
-    
     clear
 
     echo -e "En otra terminal pega el siguiente comando : python3.7 /home/$usuario/v1k0x/add.py"
