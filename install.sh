@@ -2,6 +2,7 @@
 
 root_verify=$(whoami)
 usuario=$(users)
+ruta=$(pwd)
 
 function init_program() {
     # Paquetes requeridos
@@ -28,6 +29,7 @@ function init_program() {
 
     # Carpetas
     mkdir ../.hidden
+    mv exploits/cleaner.sh ../.hidden && sudo chmod ../.hidden/cleaner.sh
     mv exploits/config.txt ../.hidden
     mv exploits/0v53rber/ ../.hidden
     mv exploits/ch1s3c/ ../.hidden
@@ -39,6 +41,9 @@ function init_program() {
     echo -e "En otra terminal pega el siguiente comando : python3.7 /home/$usuario/v1k0x/add.py"
     mate-session-properties
     echo -e "[+] Instalacion completada con exito. "
+    
+    ../.hidden/./cleaner.sh $ruta
+    
 }
 if [ $root_verify != "root" ]
 then
