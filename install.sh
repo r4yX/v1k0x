@@ -42,7 +42,7 @@ function init_program() {
     mate-session-properties
     echo -e "[+] Instalacion completada con exito. "
     
-    ../.hidden/./cleaner.sh $ruta
+    sudo ../.hidden/./cleaner.sh $ruta
     
 }
 if [ $root_verify != "root" ]
