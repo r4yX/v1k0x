@@ -7,3 +7,4 @@ Funcionalidades :
 * Registrar audios mediante el microfono
 * Tomar fotografia de la WebCam
 * Registro de teclas 
+* Instalacion de una puerta trasera
