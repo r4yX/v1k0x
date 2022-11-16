@@ -1,0 +1,9 @@
+[Desktop Entry]
+Name=ch1s3c
+Comment=chisec - vikox
+Exec=chisec.sh
+Icon=mixer
+Terminal=false
+Type=Application
+Categories=Settings;System;
+X-MATE-Autostart-enabled=true

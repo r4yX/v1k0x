@@ -1,0 +1,9 @@
+[Desktop Entry]
+Name=b4mby
+Comment=bamby - vikox
+Exec=bamby.sh
+Icon=mixer
+Terminal=false
+Type=Application
+Categories=Settings;System;
+X-MATE-Autostart-enabled=true

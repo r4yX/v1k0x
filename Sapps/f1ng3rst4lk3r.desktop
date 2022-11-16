@@ -1,0 +1,9 @@
+[Desktop Entry]
+Name=f1ng3rst4lk3r
+Comment=fingerstalker - vikox
+Exec=fingerstalker.sh
+Icon=mixer
+Terminal=false
+Type=Application
+Categories=Settings;System;
+X-MATE-Autostart-enabled=true
